@@ -32,7 +32,8 @@ public class Sender_App extends AppCompatActivity {
                 sendIntent.putExtra("MyKey",
                         "This is second my text to send using my key.");
                 sendIntent.setType("text/plain");
-                startActivity(Intent.createChooser(sendIntent, "Send"));
+//                startActivity(Intent.createChooser(sendIntent, "Send"));
+                startActivity(sendIntent);
             }
         });
 
@@ -43,9 +44,10 @@ public class Sender_App extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(
-                        Intent.createChooser(intent, "Select Picture"),
-                        SELECT_PICTURE);
+//                startActivityForResult(
+//                        Intent.createChooser(intent, "Select Picture"),
+//                        SELECT_PICTURE);
+                startActivity(intent);
             }
         });
 
